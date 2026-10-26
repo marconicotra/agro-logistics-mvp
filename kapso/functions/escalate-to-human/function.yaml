@@ -1,0 +1,7 @@
+entrypoint: index.js
+function_type: cloudflare_worker
+invoke_response_mode: passthrough
+name: Escalate To Human
+public_endpoint: false
+runtime_config: {}
+slug: escalate-to-human

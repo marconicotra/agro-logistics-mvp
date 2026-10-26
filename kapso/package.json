@@ -1,0 +1,28 @@
+{
+  "name": "agro-logistics-kapso",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kapso WhatsApp transport adapter for AGRO Logistics MVP.",
+  "type": "module",
+  "scripts": {
+    "build": "kapso build",
+    "pull": "kapso pull",
+    "push": "kapso push",
+    "push:functions": "kapso push function",
+    "push:workflow": "kapso push workflow agro-whatsapp",
+    "status": "kapso status",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kapso/workflows": "^0.2.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.104.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@kapso/cli": "^0.15.0",
+    "@types/node": "^25.6.0",
+    "typescript": "^5.8.0"
+  }
+}

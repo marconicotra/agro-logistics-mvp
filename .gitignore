@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.egg-info/
+node_modules/
+dist/
+var/
+*.tsbuildinfo
+.DS_Store
+/todo.md

@@ -1,0 +1,8 @@
+definition: definition.json
+name: AGRO WhatsApp
+slug: agro-whatsapp
+status: draft
+triggers:
+  - active: false
+    phoneNumberId: "597907523413541"
+    triggerType: inbound_message

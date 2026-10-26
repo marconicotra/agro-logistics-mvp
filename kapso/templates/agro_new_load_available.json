@@ -1,0 +1,22 @@
+{
+  "name": "agro_new_load_available",
+  "language": "es_AR",
+  "category": "UTILITY",
+  "parameter_format": "POSITIONAL",
+  "components": [
+    {
+      "type": "BODY",
+      "text": "Nueva carga disponible. Carga {{1}}, ruta {{2}}, fecha u hora {{3}}, observaciones {{4}}. Responde a este mensaje si te interesa.",
+      "example": {
+        "body_text": [
+          [
+            "50 cabezas vacas",
+            "Cordoba Capital -> La Plata, Buenos Aires",
+            "15 de junio",
+            "Carga general"
+          ]
+        ]
+      }
+    }
+  ]
+}

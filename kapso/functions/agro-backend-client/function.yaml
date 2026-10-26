@@ -1,0 +1,7 @@
+entrypoint: index.js
+function_type: cloudflare_worker
+invoke_response_mode: passthrough
+name: AGRO Backend Client
+public_endpoint: false
+runtime_config: {}
+slug: agro-backend-client

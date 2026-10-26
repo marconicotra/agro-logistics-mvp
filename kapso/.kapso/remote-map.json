@@ -1,0 +1,62 @@
+{
+  "functions": {
+    "agro-backend-client": {
+      "files": {
+        "functions/agro-backend-client/function.yaml": "64fda2863670241cb8b6cfcb728325468407a5f617d0ad8bcb73bf5c7e38cdfe",
+        "functions/agro-backend-client/index.js": "886176ae0d73345617a6280565f4b26e6152139d2d5aa80b61b8c60ec9c871e2"
+      },
+      "id": "c0fbce7e-c930-4e46-905b-c79cfb121843",
+      "lastDeployedAt": "2026-10-01T15:47:29-03:00",
+      "lockVersion": 7,
+      "slug": "agro-backend-client",
+      "status": "deployed",
+      "updatedAt": "2026-10-01T15:47:30-03:00"
+    },
+    "escalate-to-human": {
+      "files": {
+        "functions/escalate-to-human/function.yaml": "bf8752b3e61d1bda46fd61b01aceae80db85a90bd53aa0f262d10f5f3dceee6c",
+        "functions/escalate-to-human/index.js": "7f5816c018a0543167b020912fbd5095507615f44ed55ca52ec0e50ef4fc49fa"
+      },
+      "id": "2b1bd365-f040-4278-9301-323b9096a315",
+      "lastDeployedAt": "2026-04-30T18:30:19-04:00",
+      "lockVersion": 1,
+      "slug": "escalate-to-human",
+      "status": "deployed",
+      "updatedAt": "2026-04-30T18:30:20-04:00"
+    },
+    "search-knowledge": {
+      "files": {
+        "functions/search-knowledge/function.yaml": "1480224f13d90e559d432fa691ebbfe0d3f8bf6cdf29c0129198851065786159",
+        "functions/search-knowledge/index.js": "08f2727b396e302669b7a30910fadd1af6a3253a3cdbb56890aca43eaeea881b"
+      },
+      "id": "b4422ddb-39b7-4dea-8735-05b1c514c96d",
+      "lastDeployedAt": "2026-04-30T18:30:23-04:00",
+      "lockVersion": 1,
+      "slug": "search-knowledge",
+      "status": "deployed",
+      "updatedAt": "2026-04-30T18:30:23-04:00"
+    }
+  },
+  "version": 1,
+  "workflows": {
+    "agro-whatsapp": {
+      "files": {
+        "workflows/agro-whatsapp/definition.json": "5816edf8a58e9c552cd7aaf32775842938d296d708700a4f7e64d7240ae2807e",
+        "workflows/agro-whatsapp/workflow.yaml": "cd4bf933aef41e15c33ba09ac5610354719603990fbab4edb8ed86ed42cb34a5"
+      },
+      "generatedSource": {
+        "hash": "6d79e0b9b250d49a4727223e67b5e605763672c9d455c17a7c76714989431847",
+        "path": "workflows/agro-whatsapp/workflow.js"
+      },
+      "id": "cb16c3fe-974c-4d17-a809-4e44a65b82ac",
+      "lockVersion": 7,
+      "slug": "agro-whatsapp",
+      "sourceFile": {
+        "hash": "60806ce801f95ab67f0b37c83b2247311423b91f837ffda41f84432e71dfd6b1",
+        "path": "workflows/agro-whatsapp/workflow.js"
+      },
+      "status": "active",
+      "updatedAt": "2026-10-01T15:31:50-03:00"
+    }
+  }
+}

@@ -1,0 +1,3094 @@
+[
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "3 de febrero"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "A. Alsina"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "A. Gonzales Chaves"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Aguas Verdes"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Alberdi"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Algarrobo"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Azucena"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Bolívar"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Bonifacio"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Brandsen"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Carapachay"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Cariló"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Coronel Rosales"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Costa Azul"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Costa Chica"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Costa del Este"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Costa Esmeralda"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Del Viso"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Diego de Alvear"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Don Torcuato"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Exaltación de la Cruz"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Garín"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gonzalez Catan"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Alvarado"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Alvear"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Arenales"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Belgrano"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Guido"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Lamadrid"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Las Heras"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Lavalle"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Madariaga"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Pacheco"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Paz"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Pinto"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Pueyrredón"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Rodríguez"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Viamonte"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Gral. Villegas"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Guernica"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Hereford"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Hipólito Yrigoyen"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Ing. Maschwitz"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Ingeniero Luiggi"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "J.N. Fernández"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "La rural de Palermo"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Las Toninas"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Lezama"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Liniers"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Lucila del Mar"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Mapis"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Mar de Ajó"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Mar de las Pampas"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Mar del Tuyú"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Mercado Liniers"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Monte"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Munro"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Necochea"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Parravicini"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Partido de la Costa"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Partido de Rivadavia"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Pinar del Sol"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Polvorines"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Pte. Perón"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Rivadavia"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "San Antonio de Padua"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "San Nicolás"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Santa Teresita"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Tordillo"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Udaondo"
+  },
+  {
+    "province_name": "Buenos Aires",
+    "locality_name": "Villarino"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Aconquija"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Antofagasta"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Catamarca"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "F.Mamerto Esquiú"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Paclín"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Pozo de La Piedra"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Puerta de Corral"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Puerta San José"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "S.F.V de Catamarca"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "San Fernando"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "San Fernando del Valle"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Santa Rosa"
+  },
+  {
+    "province_name": "Catamarca",
+    "locality_name": "Valle Viejo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Aldea Apeleg"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Aldea Beleiro"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Aldea Epulef"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Alto Río Sengerr"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Buen Pasto"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Camarones"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Carrenleufú"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Cholila"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Cnel. Du Graty"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Co. Centinela"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Col. Benítez"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Col. Elisa"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Col. Popular"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Colan Conhué"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Comodoro Rivadavia"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Concepción"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Corcovado"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Cushamen"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Dique F. Ameghino"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Dolavón"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Dr. R. Rojas"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "El Hoyo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "El Maitén"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Epuyén"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Esquel"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Facundo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Fte. Esperanza"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gaimán"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gan Gan"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gastre"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gdor. Costa"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gral. Capdevila"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gral. Pinero"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gral. San Martín"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gral. Vedia"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Gualjaina"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "I. del Cerrito"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "J. de San Martín"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "J.J. Castelli"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Lago Blanco"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Lago Puelo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Lagunita Salada"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Las Plumas"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Los Altares"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Misión N. Pompeya"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Paso de los Indios"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Paso del Sapo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pdcia. de La Plaza"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pdcia. Roca"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pdcia. Roque Sáenz Peña"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pto. Bermejo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pto. Eva Perón"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pto. Madryn"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Pto. Pirámides"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Puero Tirol"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Rada Tilly"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Rawson"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Río Mayo"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Río Pico"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Sáenz Peña"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Sarmiento"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Tecka"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Telsen"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Trelew"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Trevelin"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Veintiocho de Julio"
+  },
+  {
+    "province_name": "Chaco",
+    "locality_name": "Villa R. Bermejito"
+  },
+  {
+    "province_name": "Ciudad Autónoma de Buenos Aires",
+    "locality_name": "Mercado de Liniers"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Arguello"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Buchardo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Calamuchita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Calmayo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Candelaria Sud"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Capilla de Remedios"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Capitan Gral B. O-Higgins"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Almada"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Anita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Barge"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Bismark"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Bremen"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Caroya"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Italiana"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Iturraspe"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Las Cuatro Esquinas"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Las Pichanas"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Marina"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Prosperidad"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. San Bartolome"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. San Pedro"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Tirolesa"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Vicente Aguero"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Videla"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Vignaud"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Col. Waltelina"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Comechingones"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Costa Sacate"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Estación Gral. Paz"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Estación Juárez Celman"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gral. Baldissera"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gral. Cabrera"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gral. Deheza"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gral. Fotheringham"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gral. Levalle"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gral. Roca"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Gutenberg"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Holmberg"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Jovita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "L. V. Mansilla"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "La Barranquita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "La Porteña"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "La Rancherita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Las Peñas Sud"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Los Chañaritos (C.E)"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Los Chanaritos (R.S)"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Monte Cristo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Mte. Buey"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Mte. Cristo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Mte. De Los Gauchos"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Mte. Leña"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Mte. Maíz"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Mte. Ralo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Nicolás Bruzone"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Nueva Córdoba"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Olivares San Nicolás"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Onagolty"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Pampayasta N."
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Pampayasta S."
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Reducción"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Rodeo Viejo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "SAN AMBROSIO"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "San Ignacio"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "San Javier"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "San Jerónimo"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "San Marcos Sierras"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "San Marcos Sud"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "San Pedro N."
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Santa Flora"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Santa Maria"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Saturnino M.Laspiur"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Sgo. Temple"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Sta. Rosa de Calamuchita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Sta. Rosa de Río Primero"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Tosquita"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Tutti"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Vélez Sarfield"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Candelaria N."
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Ciudad Pque Los Reartes"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa El Chancay"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Gral. Belgrano"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Pque. Santa Ana"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Pque. Siquiman"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Santa Cruz"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Sarmiento (G.R)"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Villa Sarmiento (S.A)"
+  },
+  {
+    "province_name": "Córdoba",
+    "locality_name": "Ycho Cruz Sierras"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Caá Cati"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Col. C. Pellegrini"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Col. Libertad"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Col. Liebig"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Col. Sta Rosa"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Gdor. Agrónomo"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Gdor. Martínez"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Herlitzka"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Nueve de Julio"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Virasoro"
+  },
+  {
+    "province_name": "Corrientes",
+    "locality_name": "Yataití Calle"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Alarcón"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Alcaraz N."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Alcaraz S."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea Elgenfeld"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea Ma. Luisa"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea San Antonio (G)"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea San Antonio (P)"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea San Miguel"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea Sta. María"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Aldea Sta. Rosa"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Altamirano Norte"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Antonio Tomás"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Arroyo Burgos"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Arroyo Clé"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Arroyo Corralito"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Arroyo del Medio"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Arroyo Maturrango"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Arroyo Palo Seco"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Banderas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Chilcas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Alemana"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Avellaneda"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Avigdor"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Ayuí"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Baylina"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Carrasco"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Celina"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Cerrito"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Crespo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Elia"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Ensayo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Gral. Roca"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. La Argentina"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Merou"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Oficial Nº13"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Oficial Nº14"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Oficial Nª3"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Oficial Nº5"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Reffino"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Tunas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Col. Viraró"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Costa Grande"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Costa San Antonio"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Costa Uruguay N."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Costa Uruguay S."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Crucecitas 3ª"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Crucecitas 7ª"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Crucecitas 8ª"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Cuchilla Redonda"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Curtiembre"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito 6º"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Chañar"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Chiqueros"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Cuarto"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Diego López"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Pajonal"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Sauce"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Tala"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Distrito Talitas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Don Cristóbal 1ª Sección"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Don Cristóbal 2ª Sección"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Echagüe"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "El Cimarrón"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "El Gramillal"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "El Quebracho"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "El Redomón"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Entre Ríos"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Espinillo N."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Estación Campos"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Estancia Líbaros"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Estancia Racedo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Estancia Solá"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Estancia Yuquerí"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Estaquitas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gdor. Echagüe"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gdor. Mansilla"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "González Calderón"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gral. Almada"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gral. Alvear"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gral. Campos"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gral. Galarza"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gral. Ramírez"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Gualeguaycito"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Hinojal"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Ing. Sajaroff"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Islas del Ibicuy"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Isletas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "J.J De Urquiza"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Esmeralda"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Florida"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Fraternidad"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Hierra"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Ollita"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Providencia"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "La Verbena"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Laguna Benítez"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Las Cuevas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Las Garzas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Las Mercedes"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Las Mulitas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Las Toscas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Laurencena"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Libertador San Martín"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Loma Limpia"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Los Ceibos"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Lucas N."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Lucas S. 1ª"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Lucas S. 2ª"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "María Grande 2ª"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Mojones N."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Mojones S."
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Monte Redondo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Montoya"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Mulas Grandes"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Ñancay"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Ombú"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Pasaje Guayaquil"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Pasaje Las Tunas"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Paso de La Arena"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Paso de Las Piedras"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Paso Duarte"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Perdices"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Picada Berón"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Primer Distrito Cuchilla"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Primero de Mayo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Pto. Algarrobo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Pto. Ibicuy"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Pueblo Gral. Belgrano"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Pueblo Liebig"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Punta del Monte"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Quebracho"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Quinto Distrito"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Raices Oeste"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Rincón de Nogoyá"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Rincón del Cinto"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Rincón del Doll"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Rincón del Gato"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Cipriano"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Ernesto"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Jaime"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Justo"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Marcial"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Ramírez"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "San Roque"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Santa Lucía"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Santa Luisa"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Sauce Sur"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Veinte de Septiembre"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Villa Gdor. Etchevehere"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Walter Moss"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Yacaré"
+  },
+  {
+    "province_name": "Entre Ríos",
+    "locality_name": "Yeso Oeste"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Col. Pastoril"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Cte. Fontana"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Fortín Lugones"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Gral. Lucio V. Mansilla"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Gral. Manuel Belgrano"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Gral. Mosconi"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Ing. Juárez"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Mayor V. Villafañe"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Misión San Fco."
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Pozo del Maza"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Villa Dos Trece"
+  },
+  {
+    "province_name": "Formosa",
+    "locality_name": "Villa Gral. Güemes"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Coranzulli"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Ledesma"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Libertador Gral. San Martin"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Mina Pirquitas"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Puesto del Marqués"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Rodeitos"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "Rosario de Río Grande"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "San Rafael"
+  },
+  {
+    "province_name": "Jujuy",
+    "locality_name": "San Salvador"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Boeuf"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Chapalcó"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Col. Barón"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Col. Santa María"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Gral. Acha"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Gral. Manuel Campos"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Gral. Pico"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Ing. Luiggi"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Jagüel del Monte"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "La Pampa"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Loventuel"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Maisonnave"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "San Martin"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Sta. Isabel"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Sta. Teresa"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Tomas M. de Anchorena"
+  },
+  {
+    "province_name": "La Pampa",
+    "locality_name": "Veinticinco de Mayo"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Arauco"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Coronel F. Varela"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Gral. A.V.Peñaloza"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Gral. Belgrano"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Gral. J.F. Quiroga"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Gral. Lamadrid"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Gral. Ocampo"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Gral. San Martín"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Independencia"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Rosario Penaloza"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "San Blas de Los Sauces"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Sanagasta"
+  },
+  {
+    "province_name": "La Rioja",
+    "locality_name": "Vinchina"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Alba Posse"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Almafuerte"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Apóstoles"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Aristóbulo Del Valle"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Arroyo Del Medio"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Azara"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Bdo. De Irigoyen"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Bonpland"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Caá Yari"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Campo Grande"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Campo Ramón"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Campo Viera"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Candelaria"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Capioví"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Caraguatay"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Cdte. Guacurarí"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Cerro Azul"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Cerro Corá"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Chacras de Coria"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Col. Alberdi"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Col. Aurora"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Col. Delicia"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Col. Polana"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Col. Victoria"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Col. Wanda"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Concepción De La Sierra"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Corpus"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Dorrego"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Dos Arroyos"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Dos de Mayo"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "El Alcázar"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "El Dorado"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "El Soberbio"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Esperanza"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "F. Ameghino"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Fachinal"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Garuhapé"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Garupá"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Gdor. López"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Gdor. Roca"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Gllen"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Gral. Alvear"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Gral. Urquiza"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Guaraní"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "H. Yrigoyen"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Iguazú"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Itacaruaré"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Jardín América"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Lavalle"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Leandro N. Alem"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Libertad"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Loreto"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Los Helechos"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Luján"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Mártires"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Misiones"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Mojón Grande"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Montecarlo"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Nueve de Julio"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Oberá"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Olegario V. Andrade"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Panambí"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Profundidad"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Pto. Iguazú"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Pto. Leoni"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Pto. Piray"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Pto. Rico"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Ruiz de Montoya"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "San Antonio"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "San Ignacio"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "San Javier"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "San Pedro"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "San Vicente"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Santiago De Liniers"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Santo Pipo"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Sta. Ana"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Sta. María"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Sta. Rosa"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Tres Capones"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Veinticinco de Mayo"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Villa Nueva"
+  },
+  {
+    "province_name": "Mendoza",
+    "locality_name": "Wanda"
+  },
+  {
+    "province_name": "Misiones",
+    "locality_name": "2 de Mayo"
+  },
+  {
+    "province_name": "Misiones",
+    "locality_name": "Cmte. Andresito"
+  },
+  {
+    "province_name": "Misiones",
+    "locality_name": "El Dorado"
+  },
+  {
+    "province_name": "Misiones",
+    "locality_name": "Puerto Mineral"
+  },
+  {
+    "province_name": "Misiones",
+    "locality_name": "Wanda"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Cipolletti"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Covunco Abajo"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Coyuco Cochico"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Guañacos"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Los Chihuidos"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Pilo Lil"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Ramón Castro"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Sauzal Bonito"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Villa Curí Leuvu"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Villa del Puente Picún Leuvú"
+  },
+  {
+    "province_name": "Neuquén",
+    "locality_name": "Vista Alegre"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Arroyo de La Ventana"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Bariloche"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Calte. Cordero"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Campo Grande"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Chinchinales"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Chipauquil"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Cubanea"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "El Manso"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Gral. Conesa"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Gral. Enrique Godoy"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Gral. Fernandez Oro"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Gral. Roca"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Ing. Huergo"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Ing. Jacobacci"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Mtro. Ramos Mexia"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Paso de Agua"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Paso Flores"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Peñas Blancas"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Rincón Treneta"
+  },
+  {
+    "province_name": "Río Negro",
+    "locality_name": "Roca"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "A. Saravia"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Anta"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Col. Sta. Rosa"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Gral. Ballivian"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Gral. Güemes"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Gral. Mosconi"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Gral. Pizarro"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "J. V. Gonzalez"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Metán"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Orán"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Prof. S. Mazza"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Rivadavia Banda Norte"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Rivadavia Banda Sur"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Saclantás"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "San Antonio"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "San José De Metán"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "San Ramón"
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Santa Victoria E."
+  },
+  {
+    "province_name": "Salta",
+    "locality_name": "Santa Victoria O."
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Albardón"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Angaco"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Jachal"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Nueve de Julio"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Pocito"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "San Martín"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Sarmiento"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Ullum"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Valle Fértil"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Veinticinco de Mayo"
+  },
+  {
+    "province_name": "San Juan",
+    "locality_name": "Zonda"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "El Morro"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "Las Vertientes"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "Mercedes"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "San Francisco"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "San Gerónimo"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "Santa Rosa de Conlara"
+  },
+  {
+    "province_name": "San Luis",
+    "locality_name": "Villa Gral. Roca"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Calafate"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Comandante Piedrabuena"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Gdor. Gregores"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Pto. Deseado"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Pto. San Julián"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Pto. Santa Cruz"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Río Cuarto"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Río Turbio"
+  },
+  {
+    "province_name": "Santa Cruz",
+    "locality_name": "Veintiocho De Noviembre"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Berabevú"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Campo Piaggio"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Cnel. Arnold"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Cnel. Bogado"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Cnel. Dominguez"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Cnel. Fraga"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Aldao"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Ana"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Belgrano"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Bicha"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Bigand"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Bossi"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Cavour"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Cello"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Dolores"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Dos Rosas"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Durán"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Iturraspe"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Margarita"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Mascias"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Raquel"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. Rosa"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Col. San José"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Colonia Silva"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Colonia Tacurales"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "El Sombrerito"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Estación Alvear"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Esustolia"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Eusebia"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Fidela"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "G. Galvez"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Galisteo"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Garabalto"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Gdor. Crespo"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Gral. Gelly"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Gral. Lagos"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Guadalupe N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Hugentobler"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Humberto 1º"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Ing. Chanourdie"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Ituzaingó"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Juan de Garay"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "La Camila"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "La Clara"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "La Lucila"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "La Penca"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Mauá"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Mercado Rosario"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Monte Obscuridad"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Nicanor E. Molinas"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Portugalete"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Pte. Roca"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Pueblo Gral. San Martín"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Pueblo Irigoyen"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Pujato N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Rivadavia"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sa Pereira"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Saguier"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Saladero M. Cabal"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Bernardo (N.J.)"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Bernardo (S.J.)"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Carlos N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Carlos S."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Fco. de Santa Fé"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Genaro N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Jerónimo N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Jerónimo S."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "San Martín N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sancti Spititu"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Soutomayor"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Clara de Buena Vista"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Clara de Saguier"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Isabel"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Margarita"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Maria Centro"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. María N."
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Rosa"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Sta. Teresa"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Villa Gdor. Gálvez"
+  },
+  {
+    "province_name": "Santa Fe",
+    "locality_name": "Zenón Pereira"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Capital"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Col. Alpina"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Col. Dora"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Col. El Simbolar Robles"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Estación Simbolar"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Loreto"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Pinto"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "San Pedro de Guasayán"
+  },
+  {
+    "province_name": "Santiago del Estero",
+    "locality_name": "Taboada"
+  },
+  {
+    "province_name": "Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+    "locality_name": "Tolhuin"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Agua Dulce"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Amberes"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Ancajuli"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Buena Vista"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Burruyacú"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Cevil Redondo"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Ciudacita"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Cercado"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Mojón"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Naranjito"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Polear"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Puestito"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Sacrificio"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "El Timbó"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Escaba"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Esquina"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Gastona"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Gdor. Garmendia"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Gdor. Piedrabuena"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Huasa Pampa"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "J. B. Alberdi"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "La Esperanza"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Las Talas"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Las Talitas"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Los Bulacio"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Los Gómez"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Los Nogales"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Los Pereyra"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Los Pérez"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Los Sosa"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "M. García Fernández"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Manuela Pedraza"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Medinas"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Monte Bello"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Padre Monti"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Pampa Mayo"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Quilmes"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Raco"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Rumi Punco"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "San Felipe"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "San Ignacio"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "San Javier"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "San José"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "San Pedro"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Sgto. Moya"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Siete de Abril"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Sta. Ana"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Sta. Cruz"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Sta. Lucía"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Tapia"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Trancas"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Villa Chiligasta"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Yánima"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Yerba Buena"
+  },
+  {
+    "province_name": "Tucumán",
+    "locality_name": "Yerba Buena (S)"
+  }
+]

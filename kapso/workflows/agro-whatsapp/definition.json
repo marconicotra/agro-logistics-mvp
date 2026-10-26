@@ -1,0 +1,17 @@
+{
+  "edges": [],
+  "nodes": [
+    {
+      "data": {
+        "config": {},
+        "node_type": "start"
+      },
+      "id": "start",
+      "position": {
+        "x": 100,
+        "y": 120
+      },
+      "type": "flow-node"
+    }
+  ]
+}

@@ -105,7 +105,7 @@ export function RouteAvailabilities() {
   return (
     <section className="page">
       <header className="page-header">
-        <div><h1>Disponibilidad por recorrido</h1><p>Declaraciones de transportistas y coincidencias por paradas en el orden indicado.</p></div>
+        <div><h1>Recorridos disponibles</h1><p>Rutas que los transportistas dijeron que pueden hacer.</p></div>
         <button type="button" className="secondary-button" onClick={refresh}>Actualizar</button>
       </header>
       {error ? <div className="state-box error"><strong>No se pudo completar la operación</strong><span>{error}</span></div> : null}
@@ -113,7 +113,7 @@ export function RouteAvailabilities() {
       <details className="panel form-disclosure">
         <summary>＋ Nueva disponibilidad</summary>
         <div className="disclosure-body"><h2>Registrar recorrido disponible</h2>
-        <p>Se guarda como borrador. Activala solo después de confirmar los datos con el transportista.</p>
+        <p>Primero queda como borrador. Confirmá los datos con el transportista antes de activarlo.</p>
         <form className="form-grid" onSubmit={submit}>
           <label>Transportista<select required value={form.carrier_id} onChange={(event) => setForm({ ...form, carrier_id: event.target.value })}>
             <option value="">Seleccionar</option>{carriers.map((carrier) => <option key={carrier.id} value={carrier.id}>{carrier.name} · {carrier.id}</option>)}
@@ -129,7 +129,7 @@ export function RouteAvailabilities() {
           </select></label>
           <label>Tipos de carga admitidos<input placeholder="soja, maíz" value={form.cargo_types} onChange={(event) => setForm({ ...form, cargo_types: event.target.value })} /></label>
           <label>Equipos admitidos<input placeholder="granelero, jaula" value={form.equipment_types} onChange={(event) => setForm({ ...form, equipment_types: event.target.value })} /></label>
-          <label>Escenario QA<input value={form.test_run_id} onChange={(event) => setForm({ ...form, test_run_id: event.target.value })} /></label>
+          {import.meta.env.VITE_SHOW_QA_FIELDS === "true" ? <label>Escenario QA<input value={form.test_run_id} onChange={(event) => setForm({ ...form, test_run_id: event.target.value })} /></label> : null}
           <button className="primary-button" disabled={saving || !form.carrier_id}>{saving ? "Guardando…" : "Guardar borrador"}</button>
         </form>
         </div>
@@ -137,8 +137,8 @@ export function RouteAvailabilities() {
 
       <details className="panel form-disclosure">
         <summary>⌕ Buscar coincidencias de recorrido</summary>
-        <div className="disclosure-body"><h2>Buscar disponibilidad compatible</h2>
-        <p>La búsqueda no crea ofertas ni reserva capacidad. Los campos omitidos se indican para confirmar.</p>
+        <div className="disclosure-body"><h2>Buscar recorridos</h2>
+        <p>Buscar no confirma un viaje ni guarda capacidad.</p>
         <form className="form-grid" onSubmit={search}>
           <label>Origen<input required value={query.origin} onChange={(event) => setQuery({ ...query, origin: event.target.value })} /></label>
           <label>Destino<input required value={query.destination} onChange={(event) => setQuery({ ...query, destination: event.target.value })} /></label>
@@ -161,7 +161,7 @@ export function RouteAvailabilities() {
       </details>
 
       <section className="panel">
-        <h2>Declaraciones registradas</h2>
+        <h2>Recorridos cargados</h2>
         <PageState loading={loading} error={null} empty={!loading && rows.length === 0} emptyTitle="No hay disponibilidades" onRefresh={refresh}>
         <PaginationBar total={total} limit={limit} offset={offset} onPageChange={changePage} noun="disponibilidades" />
         {rows.map((item) => <article className="availability-row" key={item.id}>

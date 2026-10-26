@@ -65,7 +65,6 @@ export function Carriers() {
   };
 
   const columns: Column<CarrierListItem>[] = [
-    { key: "id", header: "Perfil", render: (row) => <Link className="inline-link" to={`/carriers/${row.id}`}>Abrir perfil →</Link> },
     { key: "name", header: "Nombre", render: (row) => row.name },
     { key: "phone", header: "Teléfono", render: (row) => display(row.phone) },
     { key: "email", header: "Correo electrónico", render: (row) => display(row.email) },
@@ -99,7 +98,7 @@ export function Carriers() {
     { key: "created", header: "Alta", render: (row) => formatDate(row.created_at) },
     {
       key: "action",
-      header: "Acción",
+      header: "Perfil",
       render: (row) => (
         <Link className="inline-link" to={`/carriers/${row.id}`}>
           Ver detalle
@@ -113,7 +112,7 @@ export function Carriers() {
       <header className="page-header">
         <div>
           <h1>Transportistas</h1>
-          <p>Listado general, homologación y carga manual de datos operativos.</p>
+          <p>Buscá transportistas y revisá sus datos.</p>
         </div>
         <div className="header-actions">
           <button type="button" className="secondary-button" onClick={load}>
@@ -150,7 +149,7 @@ export function Carriers() {
           className="text-input search-input"
           value={searchInput}
           onChange={(event) => setSearchInput(event.target.value)}
-          placeholder="Buscar por nombre, teléfono, empresa, CUIT o patente"
+          placeholder="Nombre, empresa, CUIT o patente"
         />
         <button type="submit" className="secondary-button">
           Buscar
@@ -176,7 +175,7 @@ export function Carriers() {
       >
         <>
           <PaginationBar total={total} limit={limit} offset={offset} onPageChange={changePage} noun="transportistas" />
-          <DataTable columns={columns} rows={rows} getRowKey={(row) => row.id} />
+          <DataTable className="carrier-list" columns={columns} rows={rows} getRowKey={(row) => row.id} />
         </>
       </PageState>
     </section>

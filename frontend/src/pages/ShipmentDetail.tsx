@@ -273,8 +273,8 @@ export function ShipmentDetail() {
               <section className="panel">
                 <div className="panel-header">
                   <div>
-                    <h2>Resumen operativo</h2>
-                    <p className="panel-subtitle">Datos base de la carga y contexto del productor.</p>
+                    <h2>Datos de la carga</h2>
+                    <p className="panel-subtitle">Qué se lleva, desde dónde y hasta dónde.</p>
                   </div>
                 </div>
                 <dl className="detail-list">
@@ -312,8 +312,8 @@ export function ShipmentDetail() {
               <section className="panel">
                 <div className="panel-header">
                   <div>
-                    <h2>Señales de revisión</h2>
-                    <p className="panel-subtitle">Confianza, faltantes y alertas que impactan la operación.</p>
+                    <h2>Datos para revisar</h2>
+                    <p className="panel-subtitle">Faltantes o datos que pueden necesitar confirmación.</p>
                   </div>
                 </div>
                 <div className="chip-row">
@@ -341,8 +341,8 @@ export function ShipmentDetail() {
               <section className="panel wide">
                 <div className="panel-header">
                   <div>
-                    <h2>Operación manual</h2>
-                    <p className="panel-subtitle">Asigná interesados o viaje completo sin salir del detalle.</p>
+                    <h2>Ayuda del operador</h2>
+                    <p className="panel-subtitle">Podés registrar interés o asignar un viaje.</p>
                   </div>
                 </div>
                 <div className="shipment-operation-bar">
@@ -385,8 +385,8 @@ export function ShipmentDetail() {
               <section className="panel">
                 <div className="panel-header">
                   <div>
-                    <h2>Assignment activo</h2>
-                    <p className="panel-subtitle">Estado actual de la asignación comercial.</p>
+                    <h2>Transportista elegido</h2>
+                    <p className="panel-subtitle">Estado de la confirmación.</p>
                   </div>
                 </div>
                 {detail.active_assignment ? (
@@ -400,7 +400,7 @@ export function ShipmentDetail() {
                 <div className="panel-header">
                   <div>
                     <h2>Viaje activo</h2>
-                    <p className="panel-subtitle">Ejecución logística derivada de la asignación.</p>
+                    <p className="panel-subtitle">Estado y recorrido del viaje.</p>
                   </div>
                 </div>
                 {detail.active_trip ? (
@@ -470,8 +470,8 @@ export function ShipmentDetail() {
               <section className="panel wide">
                 <div className="panel-header">
                   <div>
-                    <h2>Interesados y respuestas</h2>
-                    <p className="panel-subtitle">Historial de respuestas de transportistas para esta carga.</p>
+                    <h2>Respuestas</h2>
+                    <p className="panel-subtitle">Qué contestó cada transportista.</p>
                   </div>
                 </div>
                 {detail.offers.length > 0 ? (
@@ -484,8 +484,8 @@ export function ShipmentDetail() {
               <section className="panel wide">
                 <div className="panel-header">
                   <div>
-                    <h2>Historial de assignment</h2>
-                    <p className="panel-subtitle">Versiones o intentos de asignación asociados a esta carga.</p>
+                    <h2>Historial de confirmaciones</h2>
+                    <p className="panel-subtitle">Cambios y confirmaciones anteriores.</p>
                   </div>
                 </div>
                 {detail.assignments.length > 0 ? (
@@ -498,8 +498,8 @@ export function ShipmentDetail() {
               <section className="panel wide">
                 <div className="panel-header">
                   <div>
-                    <h2>Historial de viajes</h2>
-                    <p className="panel-subtitle">Seguimiento de viajes creados a partir de esta carga.</p>
+                    <h2>Viajes anteriores</h2>
+                    <p className="panel-subtitle">Viajes relacionados con esta carga.</p>
                   </div>
                 </div>
                 {detail.trips.length > 0 ? (
@@ -512,8 +512,8 @@ export function ShipmentDetail() {
               <section className="panel wide">
                 <div className="panel-header">
                   <div>
-                    <h2>Timeline operativo</h2>
-                    <p className="panel-subtitle">Auditoría completa de eventos relevantes para esta carga.</p>
+                    <h2>Qué pasó</h2>
+                    <p className="panel-subtitle">Historial de cambios y acciones.</p>
                   </div>
                 </div>
                 {detail.events.length > 0 ? (

@@ -16,9 +16,9 @@ def route_message_allowed(session, message):
         with store.lock('shipment:' + str(shipment_id)):
             shipment = SqlShipmentRequestRepository(session).get(shipment_id)
             carrier = SqlCarrierRepository(session).get(carrier_id)
-            if not shipment or shipment.status not in OPEN_LOADS or shipment.test_run_id != scope or not carrier or not carrier.is_validated or carrier.validation_status != 'APPROVED':
-                return False
             service = build_routing(session=session)
+            if not shipment or shipment.status not in OPEN_LOADS or shipment.test_run_id != scope or not carrier or not service.dispatch_eligible(carrier, scope):
+                return False
             origin = service.point(shipment.origin_location_id)['id']
             destination = service.point(shipment.destination_location_id)['id']
             if m.get('availability_id'):

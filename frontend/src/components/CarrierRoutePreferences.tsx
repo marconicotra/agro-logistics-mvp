@@ -22,9 +22,9 @@ export function CarrierRoutePreferences({carrierId, scope = ""}: {carrierId: str
     setBusy(true);setError(null);
     try {await routingApi.savePreference(carrierId,{...form,stops:stops.split(";").map(s=>s.trim()).filter(Boolean)},context,editing);setForm(null);await load();} catch(e) {setError((e as Error).message);} finally {setBusy(false);}
   };
-  return <section className="panel wide"><div className="panel-header"><h2>Recorridos habituales</h2><button className="secondary-button" onClick={()=>edit()}>Agregar recorrido habitual</button></div>
-    <p>Definen dónde recibir oportunidades. La capacidad y las fechas libres se declaran en Disponibilidades. El regreso se registra por separado.</p>
-    <label>Escenario QA (vacío para operación normal)<input className="text-input" value={context} onChange={e=>{setContext(e.target.value);setForm(null);}} /></label>{error ? <p role="alert" className="state-box error">{error}</p>:null}
+  return <section className="panel wide"><div className="panel-header"><h2>Rutas habituales</h2><button className="secondary-button" onClick={()=>edit()}>Agregar ruta</button></div>
+    <p>Rutas que suele hacer para recibir oportunidades. No confirman un viaje.</p>
+    {import.meta.env.VITE_SHOW_QA_FIELDS === "true" ? <label>Escenario QA<input className="text-input" value={context} onChange={e=>{setContext(e.target.value);setForm(null);}} /></label> : null}{error ? <p role="alert" className="state-box error">{error}</p>:null}
     {!items.length ? <p>No hay recorridos habituales declarados en este contexto.</p> : <ul>{items.map(r=><li key={r.id}>{r.data.points.map(p=>p.label).join(" → ")} · {r.status === "ACTIVE" ? "Activo" : "Pausado"} · Avisos {r.data.opt_in ? "habilitados" : "deshabilitados"} <button className="secondary-button" onClick={()=>edit(r)}>Editar</button></li>)}</ul>}
     {form ? <form onSubmit={e=>{e.preventDefault();void save();}}><div className="form-grid">
       <label className="field">Origen, localidad y provincia<input className="text-input" required value={form.origin} onChange={e=>setForm({...form,origin:e.target.value})}/></label>

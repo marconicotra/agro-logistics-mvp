@@ -1,12 +1,32 @@
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from decimal import Decimal
 from typing import Any
 
 from sqlalchemy import Float, Date, DateTime, ForeignKey, Index, JSON, Numeric, String, Text, UniqueConstraint, func
+from sqlalchemy.engine import Dialect
+from sqlalchemy.types import TypeDecorator
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.domain.models import utc_now
 from app.infrastructure.db.base import Base
+
+
+class UTCDateTime(TypeDecorator[datetime]):
+    """Keep timezone-aware instants intact on SQLite, which drops tzinfo."""
+
+    impl = DateTime(timezone=True)
+    cache_ok = True
+
+    def process_bind_param(self, value: datetime | None, dialect: Dialect) -> datetime | None:
+        if value is None or dialect.name != "sqlite":
+            return value
+        normalized = value.replace(tzinfo=timezone.utc) if value.tzinfo is None else value.astimezone(timezone.utc)
+        return normalized.replace(tzinfo=None)
+
+    def process_result_value(self, value: datetime | None, dialect: Dialect) -> datetime | None:
+        if value is None or dialect.name != "sqlite":
+            return value
+        return value.replace(tzinfo=timezone.utc) if value.tzinfo is None else value.astimezone(timezone.utc)
 
 
 class TimestampColumns:
@@ -103,8 +123,8 @@ class RouteAvailabilityRecord(TimestampColumns, Base):
     origin: Mapped[str] = mapped_column(Text, nullable=False)
     destination: Mapped[str] = mapped_column(Text, nullable=False)
     stops: Mapped[list[str]] = mapped_column(JSON, default=list, nullable=False)
-    window_start: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    window_end: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    window_start: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
+    window_end: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
     capacity: Mapped[Decimal | None] = mapped_column(Numeric(14, 3), nullable=True)
     capacity_unit: Mapped[str | None] = mapped_column(String(32), nullable=True)
     cargo_types: Mapped[list[str]] = mapped_column(JSON, default=list, nullable=False)
@@ -306,8 +326,8 @@ class ShipmentRequestRecord(TimestampColumns, Base):
     producer_phone_number: Mapped[str | None] = mapped_column(String(64), nullable=True)
     origin_location_id: Mapped[str | None] = mapped_column(ForeignKey("locations.id"), nullable=True)
     destination_location_id: Mapped[str | None] = mapped_column(ForeignKey("locations.id"), nullable=True)
-    date_window_start: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    date_window_end: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    date_window_start: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
+    date_window_end: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
     cargo_category: Mapped[str | None] = mapped_column(String(64), nullable=True)
     cargo_type: Mapped[str | None] = mapped_column(Text, nullable=True)
     quantity_unit: Mapped[str | None] = mapped_column(String(64), nullable=True)
@@ -339,8 +359,8 @@ class TripOfferRecord(TimestampColumns, Base):
     response_type: Mapped[str] = mapped_column(String(64), nullable=False)
     status: Mapped[str] = mapped_column(String(64), nullable=False)
     price_estimate: Mapped[Decimal | None] = mapped_column(Numeric(14, 2), nullable=True)
-    availability_window_start: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    availability_window_end: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    availability_window_start: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
+    availability_window_end: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
     confidence: Mapped[str] = mapped_column(String(64), nullable=False)
     requires_human_review: Mapped[bool] = mapped_column(default=False, nullable=False)
 

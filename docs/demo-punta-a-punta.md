@@ -127,8 +127,10 @@ APP_ENV=staging STORAGE_BACKEND=sql .venv/bin/python scripts/dispatch_notificati
 4. Si la API SQL local del panel no está activa, abrir otra terminal:
 
 ```bash
-APP_ENV=local STORAGE_BACKEND=sql WHATSAPP_PROVIDER=mock ENABLE_REAL_WHATSAPP=false AI_PROVIDER=disabled STT_ENABLED=false MEDIA_DOWNLOAD_ENABLED=false .venv/bin/uvicorn backend.app.main:app --host 127.0.0.1 --port 8003
+APP_ENV=local STORAGE_BACKEND=sql WHATSAPP_PROVIDER=mock ENABLE_REAL_WHATSAPP=false BACKOFFICE_SANDBOX_LOCATION_REQUESTS=true AI_PROVIDER=disabled STT_ENABLED=false MEDIA_DOWNLOAD_ENABLED=false .venv/bin/uvicorn backend.app.main:app --host 127.0.0.1 --port 8003
 ```
+
+`BACKOFFICE_SANDBOX_LOCATION_REQUESTS=true` habilita únicamente el botón **Solicitar ubicación** para el contacto permitido del Sandbox; el resto de envíos desde este backoffice sigue en modo mock. Mantener un solo worker de outbox con el mismo phone number ID Sandbox.
 
 5. Si Vite no está activo, abrir otra terminal:
 

@@ -52,7 +52,7 @@ export function CarrierCreate() {
             Volver a transportistas
           </Link>
           <h1>Nuevo transportista</h1>
-          <p>Alta manual para soporte y homologación asistida.</p>
+          <p>Cargá los datos del transportista.</p>
         </div>
       </header>
 

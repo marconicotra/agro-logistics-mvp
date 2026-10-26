@@ -8,11 +8,11 @@ const navItems = [
   { to: "/notifications", label: "Avisos", icon: "bell" },
   { to: "/shipments", label: "Cargas", icon: "box" },
   { to: "/trips", label: "Viajes", icon: "truck" },
-  { to: "/route-availabilities", label: "Recorridos disponibles", icon: "map" },
+  { to: "/route-availabilities", label: "Recorridos", icon: "map" },
   { to: "/producers", label: "Productores", icon: "people" },
   { to: "/carriers", label: "Transportistas", icon: "users" },
-  { to: "/whatsapp-allowlist", label: "Acceso a WhatsApp", icon: "shield" },
-  { to: "/catalogs", label: "Catálogos", icon: "settings" }
+  { to: "/whatsapp-allowlist", label: "Números autorizados", icon: "shield" },
+  { to: "/catalogs", label: "Listas del sistema", icon: "settings" }
 ];
 
 export function Layout() {

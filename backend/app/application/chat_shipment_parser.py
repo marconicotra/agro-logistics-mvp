@@ -185,6 +185,7 @@ def _extract_weight_per_head(
     match = re.search(
         rf"\b(?:{aliases})\b.{{0,45}}?"
         r"(?:\bde\s+|\bcon\s+(?:un\s+)?peso(?:\s+promedio)?\s+(?:de\s+)?|"
+        r"\bpeso(?:\s+aproximado|\s+promedio)?\s*(?:de\s+)?|"
         r"\bpesaje(?:\s+promedio)?\s*(?:de\s+)?|\bpromedio\s+de\s+)"
         r"(\d+(?:[,.]\d+)?)\s*(?:kg|kgs|kilo(?:s|gramo(?:s)?)?)\b",
         normalized_text,

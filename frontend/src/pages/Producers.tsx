@@ -53,7 +53,7 @@ export function Producers() {
   return (
     <section className="page">
       <header className="page-header">
-        <div><h1>Productores</h1><p>Perfiles y actividad operativa registrados.</p></div>
+        <div><h1>Productores</h1><p>Buscá un productor para ver sus cargas y viajes.</p></div>
         <button type="button" className="secondary-button" onClick={load}>Actualizar</button>
       </header>
       <form className="toolbar" onSubmit={submitSearch}>

@@ -10,5 +10,7 @@ node_modules/
 dist/
 var/
 *.tsbuildinfo
+/frontend/test-results/
+/frontend/playwright-report/
 .DS_Store
 /todo.md

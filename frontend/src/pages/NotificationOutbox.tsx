@@ -95,8 +95,8 @@ export function NotificationOutbox() {
     <section className="page">
       <header className="page-header">
         <div>
-          <h1>Notificaciones</h1>
-          <p>Estado del despacho de avisos salientes. No muestra teléfonos ni el contenido de los mensajes.</p>
+          <h1>Avisos</h1>
+          <p>Revisá si los avisos salieron.</p>
         </div>
         <button type="button" className="secondary-button" onClick={load}>
           Actualizar

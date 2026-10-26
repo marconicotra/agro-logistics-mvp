@@ -281,8 +281,8 @@ export function Shipments() {
     <section className="page">
       <header className="page-header">
         <div>
-          <h1>Cargas sin asignar</h1>
-          <p>Cargas publicadas o buscando transportista que todavía no tienen una asignación activa.</p>
+          <h1>Cargas sin transportista</h1>
+          <p>Cargas publicadas que todavía no tienen transportista confirmado.</p>
         </div>
         <button type="button" className="secondary-button" onClick={() => load()}>
           Actualizar
@@ -294,7 +294,7 @@ export function Shipments() {
           <div className="panel-header">
             <div>
               <h2>Editar carga {editingShipment.id}</h2>
-              <p className="panel-subtitle">Los cambios quedan registrados como evento de backoffice.</p>
+              <p className="panel-subtitle">Los cambios quedan guardados en el historial.</p>
             </div>
             <button type="button" className="secondary-button" onClick={() => setEditingShipment(null)}>
               Cerrar

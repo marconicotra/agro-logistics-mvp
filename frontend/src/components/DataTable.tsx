@@ -10,11 +10,12 @@ type DataTableProps<T> = {
   columns: Column<T>[];
   rows: T[];
   getRowKey: (row: T) => string;
+  className?: string;
 };
 
-export function DataTable<T>({ columns, rows, getRowKey }: DataTableProps<T>) {
+export function DataTable<T>({ columns, rows, getRowKey, className }: DataTableProps<T>) {
   return (
-    <div className="table-wrap">
+    <div className={`table-wrap${className ? ` ${className}` : ""}`}>
       <table className="data-table">
         <thead>
           <tr>

@@ -75,6 +75,7 @@ El provider WhatsApp se controla por ambiente:
 | --- | --- |
 | `WHATSAPP_PROVIDER=mock|kapso` | Selecciona provider operativo. |
 | `ENABLE_REAL_WHATSAPP=false|true` | Opt-in obligatorio para outbound real. |
+| `BACKOFFICE_SANDBOX_LOCATION_REQUESTS=false|true` | Opt-in adicional, solo para que el endpoint manual de pedido de ubicación use Kapso Sandbox desde el backoffice local. Por defecto está apagado; exige SQL, modo QA, allowlist no vacía y credenciales Kapso. No habilita otros envíos del backoffice. |
 | `KAPSO_API_KEY` | Credencial API para envio outbound real. |
 | `KAPSO_BASE_URL` | Base URL de Kapso, por ejemplo `https://api.kapso.ai/meta/whatsapp` (sin versión Graph al final). |
 | `KAPSO_PHONE_NUMBER_ID` | WhatsApp Business phone number id usado en el endpoint outbound. |
@@ -93,6 +94,7 @@ Reglas:
 
 - Mock es el default seguro.
 - `WHATSAPP_PROVIDER=kapso` no alcanza para enviar real; tambien se requiere `ENABLE_REAL_WHATSAPP=true`.
+- El opt-in `BACKOFFICE_SANDBOX_LOCATION_REQUESTS` es una excepción acotada para QA: se acepta únicamente en `APP_ENV=local`, con `STORAGE_BACKEND=sql`, cambio de rol de prueba habilitado y allowlist no vacía. Solo el endpoint `/tracking/request-location` encola usando Kapso; el resto del backoffice conserva su provider configurado (por ejemplo, mock).
 - Outbound real requiere `KAPSO_API_KEY`, `KAPSO_BASE_URL`, `KAPSO_PHONE_NUMBER_ID` y `KAPSO_WEBHOOK_SECRET`.
 - Outbound real usa `X-API-Key` y el endpoint `{KAPSO_BASE_URL}/{KAPSO_PHONE_NUMBER_ID}{KAPSO_SEND_MESSAGE_PATH}`.
 - Si el texto libre falla por ventana WhatsApp 24h, el backend puede reintentar con `KAPSO_NEW_LOAD_TEMPLATE_NAME`.

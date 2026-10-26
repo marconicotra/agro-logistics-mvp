@@ -95,6 +95,23 @@ class RoutingService:
     def cargo_type(self, value):
         return normalize_cargo_type(value, types=self.cargo_catalog, categories=self.category_catalog)
 
+    def dispatch_eligible(self, carrier, scope):
+        if not carrier.is_validated:
+            return False
+        if carrier.validation_status == "APPROVED":
+            return True
+        # Synthetic QA carriers may participate only inside their active
+        # scenario and only when their contact is the scenario participant.
+        if not scope or carrier.validation_status != "QA_ONLY":
+            return False
+        phone = self.phone(carrier.normalized_phone_number or carrier.contact_phone)
+        return bool(phone) and any(
+            conversation.active_test_run_id == scope
+            and conversation.status == "OPEN"
+            and self.phone(conversation.participant_phone or conversation.normalized_phone_number) == phone
+            for conversation in self.conversations.list()
+        )
+
     def save_preference(self, carrier_id, data, scope, preference_id=None, actor="operator"):
         if not self.carriers.get(carrier_id):
             raise ValueError("Transportista no encontrado")
@@ -184,7 +201,7 @@ class RoutingService:
                 for a in self.availabilities.list():
                     if self.compatible(a, shipment, origin, destination):
                         candidates.setdefault(a.carrier_id, a.id)
-            candidates = {cid: aid for cid, aid in candidates.items() if (c := self.carriers.get(cid)) and c.is_validated and c.validation_status == "APPROVED" and self.phone(c.normalized_phone_number or c.contact_phone)}
+            candidates = {cid: aid for cid, aid in candidates.items() if (c := self.carriers.get(cid)) and self.dispatch_eligible(c, scope) and self.phone(c.normalized_phone_number or c.contact_phone)}
             stage = "AVAILABILITY" if candidates and not fallback else "PREFERENCE"
             if stage == "PREFERENCE":
                 for pref in self.store.list("preference", scope):
@@ -198,8 +215,8 @@ class RoutingService:
                 if existing and existing.status in {"QUEUED", "ACCEPTED", "RECONCILE_REQUIRED", "FAILED"}:
                     continue
                 reason = "compatible_declared_segment" if carrier.id in candidates else "no_compatible_declared_route"
-                eligible = carrier.id in candidates and carrier.is_validated and carrier.validation_status == "APPROVED"
-                if not carrier.is_validated or carrier.validation_status != "APPROVED":
+                eligible = carrier.id in candidates and self.dispatch_eligible(carrier, scope)
+                if not self.dispatch_eligible(carrier, scope):
                     reason = "not_approved"
                 if not (carrier.contact_phone or carrier.normalized_phone_number):
                     eligible, reason = False, "missing_contact"

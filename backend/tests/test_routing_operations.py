@@ -8,7 +8,7 @@ import pytest
 from app.api.dependencies import AppState
 from app.application.notifications import NotificationService
 from app.application.routing_factory import build_routing
-from app.domain.models import Carrier, Driver, Location, ShipmentRequest, Trip, TripOffer
+from app.domain.models import Carrier, ConversationSession, Driver, Location, ShipmentRequest, Trip, TripOffer
 from app.domain.route_availability import RouteAvailability
 from app.infrastructure.adapters.google_routes import GoogleRoutes, RouteUnavailable, maps_url
 from app.infrastructure.adapters.whatsapp import MockWhatsAppProvider
@@ -67,6 +67,30 @@ def test_no_declared_route_never_broadcasts(routing):
     assert service.publish(ship) == []
     assert all(m.conversation_id == ship.producer_phone_number for m in provider.sent_messages)
     assert service.store.list('dispatch', None, entity_id=ship.id)[0].status == 'EXCLUDED'
+
+
+def test_qa_only_carrier_can_receive_only_inside_matching_open_scenario(routing):
+    state, service, _, ship = routing
+    carrier = state.carriers.get('carrier')
+    carrier.validation_status = 'QA_ONLY'
+    carrier.is_validated = True
+    ship.test_run_id = 'qa_route_scope'
+    availability(state, ship, test_run_id='qa_route_scope')
+
+    assert service.publish(ship) == []
+
+    state.conversation_sessions.add(ConversationSession(
+        channel='whatsapp',
+        participant_phone=carrier.contact_phone,
+        normalized_phone_number=carrier.contact_phone,
+        active_test_run_id='qa_route_scope',
+        role_override='Producer',
+    ))
+
+    assert service.publish(ship) == ['carrier']
+    decision = service.store.get(service.store.list('dispatch', 'qa_route_scope', entity_id=ship.id)[0].id)
+    assert decision.status == 'ACCEPTED'
+    assert decision.data['stage'] == 'AVAILABILITY'
 
 
 def test_availability_first_then_preference_after_thirty_minutes(routing):

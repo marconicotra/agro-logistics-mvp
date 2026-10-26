@@ -24,6 +24,7 @@ from app.infrastructure.db.models import (
     MessageRecord,
     NotificationOutboxRecord,
 )
+from app.infrastructure.repositories.routing import RoutingOperationRecord
 
 
 def _serialize_message(message: OutboundMessage) -> dict[str, Any]:
@@ -436,6 +437,33 @@ class NotificationOutboxDispatcher:
                     idempotency_key=f"{record.idempotency_key}:outbox_{status.lower()}",
                     test_run_id=record.test_run_id,
                 )
+                metadata = record.message_payload.get("metadata", {})
+                checkpoint_id = metadata.get("checkpoint_id")
+                if status == "CONFIGURATION_MISMATCH" and checkpoint_id and record.message_payload.get("message_type") == "location_request":
+                    checkpoint = session.get(RoutingOperationRecord, str(checkpoint_id))
+                    if checkpoint and checkpoint.status == "REQUESTED":
+                        checkpoint.status = "CANCELLED"
+                        for job in session.scalars(select(RoutingOperationRecord).where(
+                            RoutingOperationRecord.kind == "job",
+                            RoutingOperationRecord.entity_id == checkpoint.entity_id,
+                            RoutingOperationRecord.test_run_id == checkpoint.test_run_id,
+                            RoutingOperationRecord.status == "PENDING",
+                        )).all():
+                            if job.data.get("checkpoint_id") == checkpoint.id and job.data.get("action") in {"REMIND", "OVERDUE"}:
+                                job.status = "CANCELLED"
+                        SqlEventLogService(session).record(
+                            event_type="TRIP_LOCATION_REQUEST_CANCELLED",
+                            actor_type="SYSTEM",
+                            entity_type="Trip",
+                            entity_id=checkpoint.entity_id,
+                            summary="Solicitud de ubicación cancelada porque el aviso no se envió",
+                            related_entity_ids={"checkpointId": checkpoint.id, "outboxId": record.id},
+                            payload={"stage": checkpoint.data.get("stage"), "error_code": error_code[:128]},
+                            source="notification_outbox",
+                            correlation_id=record.idempotency_key,
+                            idempotency_key=f"{record.idempotency_key}:location_request_cancelled",
+                            test_run_id=record.test_run_id,
+                        )
 
     def _retry_rejected(self, record_id: str) -> None:
         with self._session_factory() as session, session.begin():

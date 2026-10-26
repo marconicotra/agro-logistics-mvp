@@ -189,7 +189,7 @@ export function Trips() {
       <header className="page-header">
         <div>
           <h1>Viajes</h1>
-          <p>Consulta de viajes por estado operativo.</p>
+          <p>Buscá viajes por estado.</p>
         </div>
         <button type="button" className="secondary-button" onClick={load}>
           Actualizar
@@ -213,7 +213,7 @@ export function Trips() {
           <div className="panel-header">
             <div>
               <h2>Editar viaje {editingTrip.id}</h2>
-              <p className="panel-subtitle">Correcciones operativas con evento de auditoría.</p>
+              <p className="panel-subtitle">Los cambios quedan en el historial.</p>
             </div>
             <button type="button" className="secondary-button" onClick={() => setEditingTrip(null)}>
               Cerrar

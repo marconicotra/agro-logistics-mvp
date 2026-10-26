@@ -25,8 +25,8 @@ export function Dashboard() {
     <section className="page">
       <header className="page-header">
         <div>
-          <h1>Operación</h1>
-          <p>Revisá lo que necesita atención y entrá directamente a los registros.</p>
+          <h1>Inicio</h1>
+          <p>Esto es lo que hace falta revisar.</p>
         </div>
         <button type="button" className="secondary-button" onClick={load}>
           ↻ Actualizar
@@ -37,14 +37,14 @@ export function Dashboard() {
         {data ? (
           <>
             <section className="metric-section">
-              <h2>Necesitan seguimiento</h2>
+              <h2>Para revisar</h2>
               <div className="metric-grid dashboard-priority-grid">
-                <MetricCard label="Cargas sin asignar" value={data.unassigned_published_shipments} icon="box" to="/shipments" />
+                <MetricCard label="Cargas sin transportista" value={data.unassigned_published_shipments} icon="box" to="/shipments" />
                 <MetricCard label="Viajes planificados" value={data.planned_trips} icon="truck" to="/trips?status=PLANNED" />
                 <MetricCard label="Viajes en curso" value={data.in_progress_trips} icon="map" to="/trips?status=IN_TRANSIT" />
-                <MetricCard label="Homologaciones en revisión" value={data.carrier_onboarding_pending_review} icon="users" to="/carriers?filter=REVIEW" />
-                <MetricCard label="Conversaciones para revisar" value={data.open_conversations_requiring_operator} icon="chat" to="/conversations?needs_operator=true" />
-                <MetricCard label="Avisos fallidos" value={data.failed_notifications} icon="bell" to="/notifications?status=FAILED" />
+                <MetricCard label="Altas para revisar" value={data.carrier_onboarding_pending_review} icon="users" to="/carriers?filter=REVIEW" />
+                <MetricCard label="Chats para revisar" value={data.open_conversations_requiring_operator} icon="chat" to="/conversations?needs_operator=true" />
+                <MetricCard label="Avisos que no salieron" value={data.failed_notifications} icon="bell" to="/notifications?status=FAILED" />
               </div>
             </section>
             <details className="panel secondary-metrics">

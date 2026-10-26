@@ -146,7 +146,7 @@ export function ConversationDetail() {
         <div>
           <Link className="inline-link" to="/conversations">← Conversaciones</Link>
           <h1>Conversación</h1>
-          <p>Mensajes de la persona y del asistente, del más antiguo al más reciente.</p>
+          <p>Mensajes en orden, del más viejo al más nuevo.</p>
         </div>
         <button type="button" className="secondary-button" onClick={() => void loadInitial()} disabled={loading}>↻ Actualizar</button>
       </header>

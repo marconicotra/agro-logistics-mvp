@@ -77,7 +77,7 @@ export function Catalogs() {
 
   if (loading) return <div className="state-box">Cargando catálogos...</div>;
   return <section className="page-stack">
-    <header className="page-header"><div><p className="eyebrow">Configuración operativa</p><h1>Catálogos</h1><p>Datos de ubicación y carga compartidos por el agente y el backoffice.</p></div></header>
+    <header className="page-header"><div><h1>Listas del sistema</h1><p>Localidades y tipos de carga que usa el sistema.</p></div></header>
     {error ? <div className="notice error" role="alert">{error}</div> : null}{message ? <div className="notice success" role="status">{message}</div> : null}
     <div className="tabs"><button className={tab === "geography" ? "tab active" : "tab"} onClick={() => setTab("geography")}>📍 Provincias, partidos y localidades</button><button className={tab === "cargo" ? "tab active" : "tab"} onClick={() => setTab("cargo")}>📦 Categorías y tipos de carga</button></div>
     {tab === "geography" ? <>

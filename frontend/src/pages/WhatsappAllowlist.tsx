@@ -150,8 +150,8 @@ export function WhatsappAllowlist() {
     <section className="page">
       <header className="page-header">
         <div>
-          <h1>Números autorizados de WhatsApp</h1>
-          <p>Números autorizados para interactuar con el asistente según el entorno y el canal.</p>
+          <h1>Números autorizados</h1>
+          <p>Solo estos números pueden usar el asistente en este entorno.</p>
         </div>
         <button type="button" className="secondary-button" onClick={load}>
           Actualizar

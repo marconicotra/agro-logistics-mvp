@@ -19,7 +19,9 @@ def test_grain_quantity_unit_is_parsed_only_when_explicit() -> None:
     kilograms = parse_chat_shipment_text("Necesito transportar 30000 kg de soja")
     truckloads = parse_chat_shipment_text("Necesito transportar 2 camiones de soja")
 
+    assert tons.quantity_estimate == 30
     assert tons.quantity_unit == "TON"
+    assert kilograms.quantity_estimate == 30000
     assert kilograms.quantity_unit == "KG"
     assert truckloads.quantity_unit == "TRUCKLOAD"
 
@@ -102,6 +104,16 @@ def test_livestock_count_and_per_head_weight_are_separate_and_route_is_clean() -
     assert parsed.origin == "Ayacucho"
     assert parsed.destination == "Cañuelas"
     assert parsed.date_window_start == datetime(2026, 10, 27, 8, 0, tzinfo=ZoneInfo("America/Argentina/Buenos_Aires"))
+
+
+def test_approximate_livestock_weight_phrase_is_captured_per_head() -> None:
+    parsed = parse_chat_shipment_text(
+        "Necesito transportar 30 novillos, peso aproximado 350 kg por cabeza, desde Pergamino hasta Rosario el 10/05/2026"
+    )
+
+    assert parsed.quantity_estimate == 30
+    assert parsed.quantity_unit == "HEAD"
+    assert parsed.weight_per_head_kg == 350
 
 
 def test_route_destination_drops_para_el_dia_date_suffix() -> None:

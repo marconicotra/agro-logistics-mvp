@@ -26,7 +26,7 @@ export function ProducerDetail() {
   return (
     <section className="page">
       <header className="page-header">
-        <div><h1>{producer?.name ?? "Productor"}</h1><p>Ficha y actividad vinculada a los datos disponibles.</p></div>
+        <div><h1>{producer?.name ?? "Productor"}</h1><p>Datos y actividad de este productor.</p></div>
         <Link className="secondary-button" to="/producers">Volver a productores</Link>
       </header>
       <PageState loading={loading} error={error} empty={!detail} emptyTitle="No se encontró el productor" onRefresh={load}>

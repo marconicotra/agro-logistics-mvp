@@ -136,8 +136,8 @@ export function CarrierDetail() {
     },
     { key: "type", header: "Tipo", render: (row) => row.document_type },
     { key: "file", header: "Archivo", render: (row) => <DocumentLink carrierId={carrierId ?? ""} document={row} /> },
-    { key: "mime", header: "MIME", render: (row) => display(row.mime_type) },
-    { key: "provider", header: "Provider", render: (row) => display(row.provider) },
+    { key: "mime", header: "Formato", render: (row) => display(row.mime_type) },
+    { key: "provider", header: "Origen", render: (row) => display(row.provider) },
     { key: "status", header: "Estado", render: (row) => <StatusBadge status={row.status} /> },
     { key: "validity", header: "Vigencia", render: (row) => row.expires_at ?? "Sin fecha informada" },
     { key: "notes", header: "Notas", render: (row) => display(row.notes) },
@@ -416,7 +416,7 @@ export function CarrierDetail() {
           <Link className="inline-link" to="/carriers">
             Volver a transportistas
           </Link>
-          <h1>Detalle de transportista</h1>
+          <h1>Transportista</h1>
           <p>{carrierId}</p>
         </div>
         <button type="button" className="secondary-button" onClick={load}>
@@ -562,17 +562,17 @@ export function CarrierDetail() {
 
             <section className="panel">
               <div className="panel-header">
-                <h2>Homologación</h2>
+                <h2>Alta y revisión</h2>
                 <StatusBadge status={detail.onboarding.status} />
               </div>
               <dl className="detail-list">
-                <Detail label="Paso actual de WhatsApp" value={captureStepLabel(detail.capture_progress.step)} />
+                <Detail label="Avance por WhatsApp" value={captureStepLabel(detail.capture_progress.step)} />
                 <Detail
-                  label="Unidades cargadas / declaradas"
+                  label="Vehículos cargados / informados"
                   value={`${detail.capture_progress.captured_vehicle_count} / ${detail.capture_progress.declared_vehicle_count}`}
                 />
-                <Detail label="Datos requeridos" value={detail.onboarding.required_fields} />
-                <Detail label="Datos faltantes" value={detail.onboarding.missing_fields} />
+                <Detail label="Para completar el alta" value={friendlyOnboardingFields(detail.onboarding.required_fields)} />
+                <Detail label="Falta cargar" value={friendlyOnboardingFields(detail.onboarding.missing_fields)} />
                 <Detail label="Enviado" value={formatDate(detail.onboarding.submitted_at)} />
                 <Detail label="Revisado" value={formatDate(detail.onboarding.reviewed_at)} />
                 <Detail label="Motivo de rechazo" value={detail.onboarding.rejection_reason} />
@@ -659,9 +659,9 @@ export function CarrierDetail() {
                       setVehicleForm((current) => ({ ...current, status: event.target.value }))
                     }
                   >
-                    <option value="ACTIVE">ACTIVE</option>
-                    <option value="MAINTENANCE">MAINTENANCE</option>
-                    <option value="INACTIVE">INACTIVE</option>
+                    <option value="ACTIVE">Activo</option>
+                    <option value="MAINTENANCE">En mantenimiento</option>
+                    <option value="INACTIVE">Inactivo</option>
                   </select>
                 </label>
                 <div className="panel-actions form-actions-full">
@@ -766,7 +766,7 @@ export function CarrierDetail() {
                   </select>
                 </label>
                 <label className="field">
-                  <span>Tipo documento</span>
+                  <span>Qué documento es</span>
                   <input
                     className="text-input"
                     value={documentForm.document_type}
@@ -776,7 +776,7 @@ export function CarrierDetail() {
                   />
                 </label>
                 <label className="field">
-                  <span>URL externa</span>
+                  <span>Link al archivo</span>
                   <input
                     className="text-input"
                     value={documentForm.external_uri ?? ""}
@@ -819,7 +819,7 @@ export function CarrierDetail() {
                   </select>
                 </label>
                 <label className="field">
-                  <span>Tipo de archivo (MIME)</span>
+                  <span>Formato del archivo</span>
                   <input
                     className="text-input"
                     value={documentForm.mime_type ?? ""}
@@ -949,4 +949,23 @@ function captureStepLabel(step: string | null): string {
     complete: "Captura finalizada"
   };
   return step ? labels[step] ?? step : "No iniciada por WhatsApp";
+}
+
+function friendlyOnboardingFields(value: unknown): unknown {
+  const labels: Record<string, string> = {
+    contact_phone: "Teléfono",
+    phone: "Teléfono",
+    cuit: "CUIT",
+    vehicle: "Vehículo",
+    document: "Documento",
+    driver: "Conductor"
+  };
+  if (Array.isArray(value)) return value.map((item) => labels[String(item)] ?? String(item)).join(", ");
+  if (typeof value === "string") {
+    return value.split(",").map((item) => {
+      const key = item.trim();
+      return labels[key] ?? key;
+    }).join(", ");
+  }
+  return value;
 }

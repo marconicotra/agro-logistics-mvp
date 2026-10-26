@@ -70,7 +70,7 @@ export function Conversations() {
       <header className="page-header">
         <div>
           <h1>{ambiguousOnly ? "Ubicaciones por revisar" : needsOperator ? "Conversaciones para revisar" : "Conversaciones abiertas"}</h1>
-          <p>Mensajes recientes y consultas que necesitan seguimiento.</p>
+          <p>Chats recientes. Abrí uno para ver qué pasó.</p>
         </div>
         <button type="button" className="secondary-button" onClick={load}>
           Actualizar

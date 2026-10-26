@@ -18,6 +18,19 @@ npm install
 npm run dev
 ```
 
+## Pruebas E2E
+
+Prepará el entorno Python de la raíz como indica `backend/README.md`, después instalá dependencias y ejecutá Playwright:
+
+```bash
+cd frontend
+npm ci
+npm run test:e2e
+npx playwright show-report playwright-report
+```
+
+El harness crea SQLite aislado, corre Chromium desktop/mobile y simula WhatsApp y extracción de carga. No usa el `.env` ni proveedores externos. Guía, límites y resultados de la primera auditoría: [`docs/27-guia-playwright.md`](../docs/27-guia-playwright.md) y [`docs/28-playwright-audit-2026-10-26.md`](../docs/28-playwright-audit-2026-10-26.md).
+
 Variables opcionales:
 
 ```bash

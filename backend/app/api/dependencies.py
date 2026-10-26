@@ -257,6 +257,51 @@ def get_whatsapp_provider() -> WhatsAppProvider:
     return MockWhatsAppProvider()
 
 
+def get_backoffice_sandbox_location_provider() -> KapsoProvider | None:
+    """Opt in to live Kapso only for manual location requests from local QA."""
+    settings = get_settings()
+    if not settings.backoffice_sandbox_location_requests:
+        return None
+    if (
+        settings.app_env.lower() != "local"
+        or settings.storage_backend.lower() != "sql"
+        or not settings.enable_test_role_switching
+        or not settings.whatsapp_allowlist
+    ):
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Los pedidos Sandbox desde el backoffice requieren QA local, SQL y allowlist cerrada.",
+        )
+    missing = [
+        name
+        for name, value in (
+            ("KAPSO_API_KEY", settings.kapso_api_key),
+            ("KAPSO_BASE_URL", settings.kapso_base_url),
+            ("KAPSO_PHONE_NUMBER_ID", settings.kapso_phone_number_id),
+            ("KAPSO_WEBHOOK_SECRET", settings.kapso_webhook_secret),
+        )
+        if not value
+    ]
+    if missing:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Falta configurar Kapso Sandbox para solicitar ubicaciones.",
+        )
+    return KapsoProvider(
+        webhook_secret=settings.kapso_webhook_secret,
+        replay_window_seconds=settings.kapso_timestamp_tolerance_seconds,
+        api_key=settings.kapso_api_key,
+        base_url=settings.kapso_base_url,
+        phone_number_id=settings.kapso_phone_number_id,
+        send_message_path=settings.kapso_send_message_path,
+        template_language_code=settings.kapso_template_language_code,
+        interactive_enabled=settings.kapso_interactive_enabled,
+        enable_real_outbound=True,
+        allowlist=settings.whatsapp_allowlist,
+        enforce_allowlist=True,
+    )
+
+
 def get_request_db_session() -> Iterator[Session | None]:
     settings = get_settings()
     storage_backend = settings.storage_backend.lower()

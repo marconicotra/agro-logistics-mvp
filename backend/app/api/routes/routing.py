@@ -5,10 +5,11 @@ from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
-from app.api.dependencies import get_app_state, get_request_db_session, get_notification_service, require_operator_user
+from app.api.dependencies import get_app_state, get_request_db_session, get_notification_service, get_backoffice_sandbox_location_provider, require_operator_user
 from app.application.routing_factory import build_routing
 from app.core.config import get_settings
 from app.domain.routing import coordinates
+from app.infrastructure.db.notification_outbox import SqlNotificationOutboxProvider
 
 router = APIRouter(prefix="/api/v1/backoffice", tags=["Recorridos y seguimiento"])
 
@@ -104,7 +105,15 @@ def confirm_driver(trip_id: str, test_run_id: str | None = None, service=Depends
 
 
 @router.post('/trips/{trip_id}/tracking/request-location')
-def request_location(trip_id: str, test_run_id: str | None = None, service=Depends(get_routing), operator=Depends(require_operator_user)):
+def request_location(trip_id: str, test_run_id: str | None = None, service=Depends(get_routing),
+                     db=Depends(get_request_db_session), sandbox_provider=Depends(get_backoffice_sandbox_location_provider),
+                     operator=Depends(require_operator_user)):
+    if sandbox_provider is not None:
+        if db is None:
+            raise HTTPException(status_code=503, detail='Los pedidos Sandbox requieren persistencia SQL')
+        # Keep the rest of the local backoffice on its mock provider. Only this
+        # explicit QA action queues with the same Kapso account as the worker.
+        service.provider = SqlNotificationOutboxProvider(provider=sandbox_provider, session=db)
     return bad_request(lambda: asdict(service.request_checkpoint(trip_id, test_run_id, request_key=str(uuid4()))))
 
 

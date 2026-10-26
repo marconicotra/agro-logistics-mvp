@@ -17,8 +17,10 @@ class FakeAIClient:
     def __init__(self, extraction: LoadDataExtraction | None = None, error: Exception | None = None) -> None:
         self.extraction = extraction
         self.error = error
+        self.messages: list[str] = []
 
     def extract_load_data(self, message_text: str) -> LoadDataExtraction:
+        self.messages.append(message_text)
         if self.error:
             raise self.error
         assert self.extraction is not None
@@ -139,6 +141,40 @@ def test_complete_extraction_prepares_canonical_confirmation_preview() -> None:
         "MESSAGE_RECEIVED",
         "LOAD_PREVIEW_PREPARED",
     ]
+
+
+def test_grain_confirmation_preview_labels_declared_tonnage_as_total_weight() -> None:
+    text = "Necesito transportar 25 toneladas de soja desde Pergamino hasta Rosario el 02/11/2026"
+    orchestrator = build_orchestrator(
+        FakeAIClient(
+            LoadDataExtraction(
+                raw_text=text,
+                cargo_category="GRAIN",
+                cargo_type="soja",
+                quantity_estimate=Decimal("25"),
+                quantity_unit="TON",
+                origin="Pergamino",
+                destination="Rosario",
+                date_window_start=datetime(2026, 11, 2, 8, 0, tzinfo=ZoneInfo("America/Argentina/Buenos_Aires")),
+                confidence="high",
+                field_confidence={
+                    "cargo_type": "provided",
+                    "quantity_estimate": "provided",
+                    "quantity_unit": "provided",
+                    "origin": "provided",
+                    "destination": "provided",
+                    "date_window": "provided",
+                },
+            )
+        )
+    )
+
+    result = orchestrator.handle_inbound_message(inbound_message(text, idempotency_key="grain_weight_preview"))
+
+    assert result.response_text is not None
+    assert "⚖️ Peso total: 25 toneladas" in result.response_text
+    assert "Cantidad: 25 toneladas" not in result.response_text
+    assert "por cabeza" not in result.response_text
 
 
 def test_grain_preview_asks_for_missing_unit_even_if_ai_guesses_tons() -> None:
@@ -447,6 +483,61 @@ def test_multiturn_confirmation_keeps_only_latest_consistent_load_context_in_not
     assert confirmed.shipment_request.operational_notes == (
         "quiero cargar 13 toneladas de soja desde santa fe a misiones el 10 de agosto"
     )
+
+
+def test_new_complete_load_does_not_reuse_previous_confirmed_load_context() -> None:
+    ai_client = FakeAIClient(
+        LoadDataExtraction(
+            raw_text=(
+                "Necesito transportar 30 novillos, peso aproximado 350 kg por cabeza, "
+                "desde Pergamino, Buenos Aires hasta Rosario, Santa Fe para el 10/05/2026."
+            ),
+            cargo_category="livestock",
+            cargo_type="novillos",
+            quantity_unit="HEAD",
+            origin="Pergamino, Buenos Aires",
+            destination="Rosario, Santa Fe",
+            date_window_start=datetime(2026, 5, 10, 8, 0, tzinfo=ZoneInfo("America/Argentina/Buenos_Aires")),
+            date_window_end=datetime(2026, 5, 10, 23, 59, tzinfo=ZoneInfo("America/Argentina/Buenos_Aires")),
+            livestock_type="novillos",
+            quantity_estimate=Decimal("30"),
+            weight_per_head_kg=Decimal("350"),
+            confidence="high",
+            field_confidence={
+                "cargo_type": "provided",
+                "quantity_estimate": "provided",
+                "origin": "provided",
+                "destination": "provided",
+                "date_window": "provided",
+            },
+        )
+    )
+    orchestrator = build_orchestrator(ai_client)
+    first_request = (
+        "Necesito transportar 30 novillos, peso aproximado 350 kg por cabeza, "
+        "desde Pergamino, Buenos Aires hasta Rosario, Santa Fe para el 10/05/2026."
+    )
+    second_request = (
+        "Necesito transportar 20 novillos desde Pergamino, Buenos Aires "
+        "a Rosario, Santa Fe el 11/05/2026."
+    )
+
+    preview = orchestrator.handle_inbound_message(
+        inbound_message(first_request, idempotency_key="evt_new_load_context_1")
+    )
+    assert preview.response_text is not None
+    assert "⚖️ Pesaje: 350 kg por cabeza" in preview.response_text
+    published = orchestrator.handle_inbound_message(
+        inbound_message("Confirmar", idempotency_key="evt_new_load_context_confirm")
+    )
+    assert published.shipment_request is not None
+    assert published.shipment_request.status == "PUBLISHED"
+
+    orchestrator.handle_inbound_message(
+        inbound_message(second_request, idempotency_key="evt_new_load_context_2")
+    )
+
+    assert ai_client.messages == [first_request, second_request]
 
 
 def test_known_carrier_can_still_create_load_when_messages_look_like_producer_flow() -> None:

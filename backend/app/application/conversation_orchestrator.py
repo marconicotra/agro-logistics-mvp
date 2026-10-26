@@ -710,7 +710,14 @@ class ConversationOrchestrator:
             session,
             current_message=message,
         )
-        if prior_load_messages and self._looks_like_partial_chat_shipment_update(text):
+        # A complete new request starts a fresh draft. Combining it with older
+        # requests can resurrect fields from a load that was already confirmed.
+        # Only append genuinely partial corrections to the pending request.
+        if (
+            prior_load_messages
+            and self._looks_like_partial_chat_shipment_update(text)
+            and not self._looks_like_chat_shipment_request(text)
+        ):
             extraction_text = self._combine_load_message_texts([*prior_load_messages, message])
         try:
             extraction = self._ai_client.extract_load_data(extraction_text)
@@ -3504,6 +3511,12 @@ class ConversationOrchestrator:
             extraction.quantity_estimate,
             extraction.quantity_unit,
         )
+        quantity_label = (
+            "⚖️ Peso total"
+            if extraction.cargo_category == "GRAIN"
+            and extraction.quantity_unit in {"TON", "KG"}
+            else "• Cantidad"
+        )
         weight_line = (
             f"\n⚖️ Pesaje: {self._quantity_label(extraction.weight_per_head_kg, 'KG')} por cabeza"
             if extraction.weight_per_head_kg is not None
@@ -3517,7 +3530,7 @@ class ConversationOrchestrator:
         )
         return (
             "Para crear la carga, confirmá estos datos:\n\n"
-            f"📦 Tipo de carga: {cargo}\n• Cantidad: {quantity}{weight_line}\n📍 Origen: {origin}\n"
+            f"📦 Tipo de carga: {cargo}\n{quantity_label}: {quantity}{weight_line}\n📍 Origen: {origin}\n"
             f"📍 Destino: {destination}\n📅 Fecha: {date_label}\n\n"
             "✅ ¿Confirmás esta información?"
         )

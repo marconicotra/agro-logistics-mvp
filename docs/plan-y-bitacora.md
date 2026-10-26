@@ -882,3 +882,74 @@ En curso. El recorrido Sandbox de crear carga, consultar interesados, aceptar of
 - El respaldo local de PostgreSQL permaneció en `/tmp`; no se agregó al repositorio. `.env`, `var/`, `todo.md` y `frontend/tsconfig.tsbuildinfo` quedaron excluidos. Se reforzó `.gitignore` para conservar esa protección.
 - Antes del commit se revisaron archivos staged con patrones de credenciales: cero coincidencias. No se ejecutaron pruebas automáticas en esta tarea. `git diff --cached --check` señaló líneas vacías adicionales al final de algunos archivos de agentes, prompts y skills; no se cambiaron porque son contenido ya existente y no bloquean el funcionamiento.
 - Verificación final de publicación: `main` local y `origin/main` quedaron en `e43363e`; el árbol de trabajo rastreado quedó limpio.
+
+### 2026-10-26 — Punta a punta real en Kapso Sandbox
+
+- Con autorización del usuario, se inició el escenario `qa_26e90a0cc28a` desde el chat Sandbox y se verificó su persistencia en PostgreSQL. El mismo participante alternó los roles de productor y transportista dentro de ese escenario.
+- Se observó que una solicitud completa nueva podía combinarse con el texto de una carga ya publicada y volver a mostrar datos anteriores. No se confirmó el resumen incorrecto. Se corrigió la extracción para combinar mensajes solo en correcciones parciales, y se agregó una regresión: carga completa nueva después de una publicación → contexto de extracción nuevo. Regresión completa de `test_conversation_orchestrator.py` y `test_routing_operations.py`: **53 aprobadas**. El primer intento heredó `APP_ENV=staging` del `.env` y falló en dos pruebas de autenticación local (401); se repitió con entorno explícito `APP_ENV=local`, almacenamiento en memoria, WhatsApp mock, `ENABLE_REAL_WHATSAPP=false` y OpenAI sin clave, sin servicios externos.
+- Se encontró que el despachador y la barrera de la outbox rechazaban transportistas sintéticos `QA_ONLY`, aunque la preferencia/disponibilidad coincidiera. Ahora solo son elegibles cuando existe escenario de prueba abierto y el teléfono de contacto coincide con un participante de ese mismo escenario. La regla se aplicó también a la validación inmediatamente anterior al envío.
+- Se reiniciaron el API Sandbox y el worker local de outbox para cargar esos cambios. Se conservaron las dos notificaciones que el worker anterior había cancelado como `routing_context_changed`; no se reintentaron. Una nueva notificación dirigida sí fue aceptada por el proveedor y llegó al chat Sandbox.
+- Recorrido real completado: disponibilidad Pergamino → Rosario (02/11/2026, 30 cabezas de novillos, jaula); carga compatible de 8 cabezas; aviso dirigido; interés del transportista; aceptación del productor; consulta `Ver mi viaje`. La base contiene una oferta `INTERESTED`, una asignación `CONFIRMED` y un viaje `PLANNED`, todos asociados a `qa_26e90a0cc28a`. El viaje no tiene chofer asignado.
+- En el escenario quedaron **5 cargas ficticias publicadas**: cuatro sin asignación y una aceptada. Se preservan para auditoría; no se hicieron borrados generales. Solo la carga de 8 cabezas recibió aviso dirigido después de que el worker tuviera el fix cargado.
+- El backoffice abierto estaba conectado a un servidor temporal de datos de demo en el puerto 58400, por eso mostraba registros de muestra. Se reinició Vite en `127.0.0.1:5175` con `VITE_API_BASE_URL=http://127.0.0.1:8003`; ahora las conversaciones y viajes provienen de la API SQL local. Se verificó el hilo con el escenario y el viaje planificado.
+- Al terminar, `/test cerrar` confirmó el cierre de `qa_26e90a0cc28a`; `active_test_run_id` quedó vacío y el historial, cargas, oferta, asignación y viaje se conservaron.
+- El proveedor confirmó aceptación de los envíos, no entrega final ni lectura. No se asignó chofer, no se compartió ubicación real y no se probaron los controles GPS. No se usaron Supabase ni Google Routes, no se tocó el número de producción ni se configuraron webhooks/workflows adicionales.
+
+### 2026-10-26 — Regresión de pesaje y seguimiento con coordenadas ficticias
+
+- Revisión solicitada: el parser ya separaba cantidad de cabezas y peso por cabeza, y las cargas de granos conservaban toneladas/kg como unidad de cantidad. Faltaba comprobar explícitamente la etiqueta del peso total de granos en el resumen. Ahora el resumen lo presenta como `⚖️ Peso total`; hacienda conserva `⚖️ Pesaje: … kg por cabeza` y la cantidad de animales por separado.
+- Se corrigió la captura de expresiones como `peso aproximado 350 kg por cabeza`; antes el parser omitía ese peso si no aparecía la palabra `con`. Se agregaron regresiones para peso aproximado, cantidad y unidad de granos, y ambos formatos de confirmación.
+- Seguimiento repetido en entorno local: se ejecutaron las pruebas de `test_routing_operations.py`, incluido webhook firmado, chofer asignado de fixture, control de salida, coordenada sintética, deduplicación y consulta autenticada de seguimiento. La ruta y proveedor WhatsApp fueron simulados; no se usaron Google Routes ni Kapso.
+- Verificación final: `APP_ENV=local`, almacenamiento en memoria, `DATABASE_URL` vacío, WhatsApp mock e IA desactivada; `pytest backend/tests/test_chat_shipment_parser.py backend/tests/test_conversation_orchestrator.py backend/tests/test_routing_operations.py -q --tb=short` → **65 aprobadas**.
+- Límites: no se pidió ni transmitió ubicación del teléfono real, no se envió ubicación desde WhatsApp Sandbox, no se envió ningún mensaje y no se modificó base, webhook o configuración externa. Por eso esta evidencia valida el procesamiento interno de ubicación, no la captura real del GPS en el canal Sandbox.
+
+### 2026-10-26 — Acciones más claras para marcar origen y destino
+
+- Se revisó la implementación: las acciones funcionan en dos pasos. El botón activa la selección; luego hay que hacer clic en el mapa y confirmar. El backend guarda las coordenadas en la ubicación de origen o destino de la carga y registra un evento de auditoría.
+- Se acortaron las etiquetas a “Marcar origen en el mapa” y “Marcar destino en el mapa”. Se aclaró el paso siguiente y se agregó una opción visible para cancelar la selección activa.
+- Verificación realizada por inspección de frontend y endpoint backend. No se ejecutaron pruebas automatizadas ni se modificaron datos de viajes.
+
+### 2026-10-26 — Mapa estable y selección interactiva de accesos
+
+- Se identificó que el sondeo de seguimiento cada 10 segundos reconstruía Google Maps porque el efecto dependía de objetos y funciones nuevos en cada render. El mapa ahora se inicializa una vez y actualiza sus marcadores/trazado solo cuando cambian sus coordenadas o la ruta; una nueva ubicación no recentra la vista.
+- Al marcar origen o destino, el mapa resalta el modo de edición, enfoca y amplía el extremo correspondiente y presenta un pin de previsualización arrastrable. También permite elegir un punto con clic; el cambio se guarda solo al pulsar “Guardar y recalcular ruta”, que actualiza el trazado después de guardar el acceso.
+- Verificación por inspección del flujo frontend y endpoint de guardado. No se ejecutaron pruebas automatizadas ni se cambió la base de datos.
+
+### 2026-10-26 — Investigación: solicitud manual de ubicación no llegó a WhatsApp
+
+- La acción creó el control manual de ubicación y su fila de outbox, pero el backoffice API local en `8003` la encoló con el proveedor `mock_whatsapp`. El worker activo está configurado para Kapso y detuvo la fila como `CONFIGURATION_MISMATCH` (`provider_or_account_changed`).
+- La fila no tiene identificador del proveedor ni hubo llamada de envío a Kapso; no se envió el mensaje. El worker sí estaba activo. El endpoint respondió con el control creado, sin comunicar el estado real de despacho al operador.
+- Investigación de solo lectura. No se reintentó ni se duplicó la solicitud y no se modificó configuración externa.
+
+### 2026-10-26 — Corrección del pedido de ubicación desde backoffice
+
+- Se agregó el opt-in `BACKOFFICE_SANDBOX_LOCATION_REQUESTS`, apagado por defecto y válido solo en QA local con SQL, cambio de rol habilitado, allowlist cerrada y credenciales Kapso presentes. Solo el endpoint manual de solicitud de ubicación usa el adaptador Kapso; el resto del backoffice permanece en mock.
+- Al detectar un `CONFIGURATION_MISMATCH` de una solicitud de ubicación, el worker ahora cancela el control pendiente y sus recordatorios, y registra el evento; no deja una solicitud fantasma ni reintenta el envío.
+- Se reinició la API del backoffice en loopback con el opt-in limitado. El control anterior y sus dos recordatorios pendientes se marcaron `CANCELLED`; la fila original de outbox se preservó como `CONFIGURATION_MISMATCH`.
+- Con autorización previa del usuario para pruebas en el participante Sandbox, se hizo una sola nueva solicitud. La outbox quedó `ACCEPTED` por Kapso, con identificador de proveedor; esto acredita aceptación del proveedor, no entrega o lectura en WhatsApp. No se enviaron otros mensajes ni se modificó el webhook.
+- Verificación: `py_compile` aprobó los cuatro módulos backend afectados; health API y salud de PostgreSQL local OK, esquema `0019_route_operations`. No se ejecutaron pruebas automatizadas ni migraciones.
+
+### 2026-10-26 — Auditoría de pantallas, flujos y guía para Playwright
+
+- Se documentó el mapa de todas las rutas de backoffice, pantallas de estado, recorridos por WhatsApp, estados/eventos y límites entre funciones implementadas, parciales y pendientes en `docs/26-auditoria-workflows-y-pantallas.md`.
+- Se agregó `docs/27-guia-playwright.md` con criterios de locators accesibles, preparación segura de datos QA y recorridos E2E de carga, oferta, aceptación, alta de transportista, recorrido disponible y seguimiento.
+- Se simplificaron títulos y descripciones de inicio, conversaciones, cargas, viajes, transportistas, productores, recorridos, avisos, catálogos y números autorizados para usar instrucciones más cortas y vocabulario cotidiano. El modelo de dominio y los estados no cambiaron.
+- Verificación realizada por lectura de rutas, pantallas, servicios conversacionales, endpoints y documentos de alcance/estandarización; revisión de cambios de código y `git diff --check`. No se ejecutaron pruebas automatizadas.
+
+### 2026-10-26 — Harness Playwright y auditoría funcional/visual
+
+- Se verificó el estado del repo y el entorno sin tocar los servicios preexistentes. El frontend usa npm con `package-lock.json`; no tenía Playwright ni Vitest configurado. Se agregó `@playwright/test`, configuración Chromium desktop/mobile, runner, base SQLite aislada y API de QA con extracción determinista. Se preservaron los scripts y cambios de trabajo existentes.
+- La ejecución usa solo `frontend/test-results/`, API en loopback `8004`, Vite en `5176`, outbox mock, WhatsApp con webhook local firmado y datos sintéticos. No se conectó a PostgreSQL ni al `.env`, Kapso, OpenAI, Supabase, mapas o email; no hubo migraciones ni envíos reales. Las carpetas de resultados e informe HTML se excluyen de Git.
+- Se recorrieron las diez pantallas del backoffice y dos estados públicos en desktop y viewport mobile. Suite completa: **8 casos, 3 aprobados y 5 fallidos por hallazgos**. Después se amplió la verificación de alta pendiente y de que un recorrido no crea viaje; esos dos casos dirigidos en escritorio aprobaron. Build del frontend aprobado, catálogo `playwright test --list` con 8 casos y `git diff --check` sin errores.
+- Hallazgos: (1) una disponibilidad activa declarada en WhatsApp dentro del escenario no genera una oferta compatible para la carga de la misma ruta/fecha; la carga queda publicada, sin ofertas ni viaje, lo que bloquea interés y aceptación; (2) en mobile el clic de “Guardar transportista” y “Guardar borrador” es interceptado por otro elemento; en escritorio ambos flujos se completan; (3) `/carriers` desborda 18 px en escritorio y comprime demasiado sus columnas en mobile. No se implementaron correcciones de producto.
+- Se agregaron `frontend/e2e/`, `frontend/playwright.config.ts`, scripts npm y exclusiones para resultados. Se actualizaron `frontend/README.md`, `docs/27-guia-playwright.md` y se creó `docs/28-playwright-audit-2026-10-26.md` con cobertura, hallazgos, evidencia, servicios simulados, límites y comandos. Los números sintéticos se ocultan en las capturas del harness; las capturas relevantes fueron abiertas e inspeccionadas visualmente.
+- El informe lista documentación pedida que no existe (`docs/product/*`, `docs/evals/*`, `docs/runbooks/development.md`, `docs/architecture/agent-boundaries.md`) y los equivalentes consultados; no se crearon documentos paralelos. La instalación de npm informó 9 vulnerabilidades de dependencias; no se ejecutó `npm audit fix`.
+
+### 2026-10-26 — Ajustes de UX/UI y verificación del flujo E2E
+
+- La primera corrida E2E confundía el despacho de una carga con la creación de una oferta de interés. Se ajustó la expectativa: la carga se envía al transportista compatible y la oferta se registra cuando responde; el productor conserva la decisión explícita de aceptar.
+- Se detectó que SQLite elimina la zona horaria de los rangos de fechas, lo que podía hacer que la prueba de compatibilidad leyera instantes distintos. Se normalizaron a UTC los campos de ventana de disponibilidad, carga y oferta para el dialecto SQLite; PostgreSQL mantiene sus fechas con zona horaria.
+- Se corrigió la contención de ancho en mobile. `/carriers` ahora prioriza nombre, teléfono, empresa, validación, alta y perfil en escritorio; en mobile los muestra como fichas resumidas. Los campos de escenario QA solo se exponen cuando el runner establece `VITE_SHOW_QA_FIELDS=true`.
+- Se simplificaron etiquetas de alta/documentos y estados de unidades en la ficha del transportista; se mantuvieron reglas y valores de dominio.
+- Se actualizó `docs/28-playwright-audit-2026-10-26.md` con resultados finales y hallazgos corregidos; `docs/27-guia-playwright.md` aclara los estados del dispatch y de la oferta.
+- Verificación: `npm run build` aprobado; `npm run test:e2e` aprobado (**8/8**, desktop y mobile); repetición dirigida del inventario aprobado (**2/2**); capturas desktop/mobile inspeccionadas visualmente; `git diff --check` sin errores. No se usaron servicios externos ni datos reales.

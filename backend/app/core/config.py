@@ -46,6 +46,10 @@ class Settings(BaseSettings):
     kapso_interactive_enabled: bool = Field(default=False, alias="KAPSO_INTERACTIVE_ENABLED")
     whatsapp_provider: str = Field(default="mock", alias="WHATSAPP_PROVIDER")
     enable_real_whatsapp: bool = Field(default=False, alias="ENABLE_REAL_WHATSAPP")
+    backoffice_sandbox_location_requests: bool = Field(
+        default=False,
+        alias="BACKOFFICE_SANDBOX_LOCATION_REQUESTS",
+    )
     whatsapp_dev_allowlist: str = Field(default="", alias="WHATSAPP_DEV_ALLOWLIST")
     whatsapp_allowlist_source: str = Field(default="db_then_env", alias="WHATSAPP_ALLOWLIST_SOURCE")
     whatsapp_allowlist_default_allow: bool = Field(
